@@ -5,9 +5,43 @@
         <meta lang="en-EN">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Welcome</title>
+        <script src="client.js"></script>
     </head>
     <body>
-        <div id="container" style="display: flex; justify-content: center; height: 100vh; margin: 0; align-items: center;">
-            <h1>Hello friend.<br>That a my first local server!</h1>
+        <div id="container">
+            <input id="nameInput" placeholder="Name" type="text">
+            <p id="nameResult"></p>
+            <input id="passwordInput" placeholder="Password" type="password">
+            <p id="passwordResult"></p>
+            <button onclick="processInput()">Sign Up</button>
         </div>
+        <style>
+            body {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+
+            justify-content: center;
+            align-items: center;
+            }
+
+            #container {
+                display: grid;
+                height: fit-content;
+                width: fit-content;
+                border: 3px solid black;
+                border-radius: 20px;
+                padding: 30px;
+
+                justify-content: center;
+                align-items: center;
+            }
+            #nameResult{
+                height: fit-content;
+            }
+            #passwordResult{
+                height: fit-content;
+            }
+        </style>
     </body>
