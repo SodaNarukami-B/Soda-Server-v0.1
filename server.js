@@ -8,6 +8,7 @@ const serverModel = (function(){
 
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
+    app.use(express.static('puplic'));
 
     function getConnectionStatus(){
         let connectionStatus = "connected";
@@ -37,7 +38,7 @@ const serverModel = (function(){
     function startServer(){
         
         app.get("/", (req, res) => {
-            res.send("Server v0.3 | by Soda");
+            res.sendFile(__dirname + '/public/index.html');
             api.page.content++;
         });
         app.get(api.status, (req, res) => {
